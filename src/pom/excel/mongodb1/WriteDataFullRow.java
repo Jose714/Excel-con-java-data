@@ -1,3 +1,4 @@
+package pom.excel.mongodb1;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -46,10 +47,9 @@ public class WriteDataFullRow {
  
  //ll.setCellValue("Writing Done");
  Jose.get("https://www.ebay.com/");
- Jose.findElement(By.xpath("//input[@id='gh-ac']")).sendKeys(cellString);
- Jose.findElement( By.xpath("//input[@id='gh-btn']")).click();
- Jose.findElement( By.xpath("//a[@class='s-item__link'][1]")).click();
- Jose.findElement(By.cssSelector("#isCartBtn_btn")).click();
+	WebDriverWait myDynamicElement = new WebDriverWait(Jose,30);
+	myDynamicElement.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id='gh-ug']/a")));
+ 
 
 
  Thread.sleep(2000);
